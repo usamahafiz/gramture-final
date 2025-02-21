@@ -1,0 +1,110 @@
+.privacy-policy {
+    font-family: "Arial", sans-serif;
+    line-height: 1.8;
+    color: #000; /* Black text for content */
+    padding: 20px;
+    background-color: #ffffff; /* Light background for elegance */
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+}
+
+/* Headings with bold, larger text and animated bottom lines */
+.privacy-policy h1,
+.privacy-policy h3 {
+    font-weight: bolder; /* Make headings bolder */
+    font-size: 1.5rem; /* Larger font size for h1 */
+    color: #000; /* Black for headings */
+    position: relative;
+    margin-bottom: 1rem;
+    animation: slideIn 1s ease-in-out;
+    transition: color 0.3s ease; /* Smooth transition for color */
+    display: inline-block; /* Restrict to content width */
+}
+
+/* Add the bottom line only under the content */
+.privacy-policy h1::after,
+.privacy-policy h3::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 3px;
+    background-color: #ff0000; /* Red bottom line */
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.4s ease-in-out; /* Animate the bottom line on hover */
+}
+
+/* On hover, extend the bottom line */
+.privacy-policy h1:hover::after,
+.privacy-policy h3:hover::after {
+    width: 100%; /* Extend to the full width of the content */
+}
+
+/* Animate links on hover */
+.privacy-policy a {
+    color: #ff0000; /* Red for links */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.privacy-policy a:hover {
+    text-decoration: underline;
+    color: #d40000; /* Slightly darker red on hover */
+    transform: scale(1.05); /* Subtle scaling effect on hover */
+}
+
+/* Bold and elegant strong text */
+.privacy-policy strong {
+    font-weight: bold;
+    color: #000; /* Bold black text */
+    animation: popIn 1s ease-in-out;
+}
+
+/* Spacing for paragraphs */
+.privacy-policy p {
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

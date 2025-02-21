@@ -1,0 +1,537 @@
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* === Global Styles === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+}
+
+/* === Main Container === */
+.description-container {
+  width: 100%;
+  max-width: 1200px; /* Increased for better large-screen layout */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* === Title === */
+.page-title {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* === Product Section === */
+.product-article {
+  margin-bottom: 30px;
+}
+
+.product-description {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+
+/* === Table Styling (Ensures full visibility on large screens) === */
+.table-container {
+  width: 100% !important;
+  overflow: visible !important; /* Ensures no content is cut off */
+}
+
+/* === Ensuring Table Layout Stays Intact === */
+.product-description table {
+  width: 100% !important;
+  table-layout: auto; /* Allows columns to adjust dynamically */
+  border-collapse: collapse;
+  margin: 20px 0;
+  white-space: normal !important; /* Allows text wrapping */
+}
+
+.product-description table th,
+.product-description table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  word-break: break-word; /* Prevents text overflow */
+}
+
+.product-description table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+/* === Responsive Images === */
+.product-description img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* === File Preview Section === */
+.file-preview {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* === Comments Section === */
+.comment-section {
+  margin-top: 40px;
+}
+
+.comment-form input,
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.submit-btn {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* === Replies Styling === */
+.replies {
+  margin-top: 10px;
+  padding-left: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+.reply-form {
+  margin-top: 10px;
+}
+
+.reply-textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.reply-text {
+  margin-left: 20px;
+  font-style: italic;
+  color: #555;
+}
+
+/* === Responsive Design === */
+@media screen and (max-width: 768px) {
+  /* Ensures table remains scrollable */
+  .table-container {
+    display: block;
+    overflow-x: auto !important;
+    white-space: nowrap; /* Prevents table from breaking into multiple lines */
+  }
+
+  .product-description table {
+    display: block !important;
+    overflow-x: auto !important;
+    max-width: 100%;
+    border-collapse: collapse;
+  }
+
+  /* Fix for v:shape (removes margins & positioning issues) */
+  v\:shape {
+    position: static !important; /* Removes absolute positioning */
+    left: 0 !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: left !important;
+  }
+  v\:group {
+    position: static !important; /* Removes absolute positioning */
+    left: 0 !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: left !important;
+  }
+
+  
+}
+
+/* === Larger Screens (Tablet & Desktop) === */
+@media screen and (min-width: 768px) {
+
+  .description-container {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+  v\:group {
+    position: static !important; /* Removes absolute positioning */
+    left: 0 !important;
+    bottom: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: left !important;
+  }
+  v\:shape {
+    position: static !important; /* Removes absolute positioning */
+    left: 0 !important;
+    bottom: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    text-align: left !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .description-container {
+    max-width: 1200px;
+    padding: 40px;
+  }
+}
+
+/* === Ensuring Table Always Stays Within Screen Width === */
+table {
+  max-width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  word-wrap: break-word; /* Ensures text wraps inside the column */
+}
+v\:group {
+  position: static !important; /* Removes absolute positioning */
+  left: 0 !important;
+  bottom: 0 !important;
+  top: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  height: auto !important;
+  text-align: left !important;
+}
+
+/* General styling for the comment section */
+.comment-section {
+  margin: 30px 0;
+  padding: 20px;
+ 
+}
+
+.comment-section h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Comment form container */
+.comment-form .form-control {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.comment-form .comment-input {
+  margin-bottom: 15px;
+}
+
+/* Textarea styling */
+.comment-form .comment-textarea {
+  height: 120px;
+  margin-bottom: 15px;
+}
+
+/* Submit button styling */
+.comment-form .btn {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.comment-form .btn:hover {
+  background-color: #c90b24;
+}
+
+/* Styling for the comments list */
+.comments-list {
+  margin-top: 30px;
+}
+
+
+
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+.review-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.review-item.correct {
+  background-color: #e0ffe0;
+}
+
+.review-item.incorrect {
+  background-color: #ffe0e0;
+}
+
+
+.comment-item {
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.comment-author {
+  font-weight: bold;
+  color: #333;
+}
+
+.comment-text {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.replies {
+  margin-top: 15px;
+  padding-left: 20px;
+  border-left: 2px solid #ddd;
+}
+
+.comment-reply {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.reply-text {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* Styling for the reply button */
+.reply-button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.reply-button:hover {
+  background-color: #218838;
+}
+
+/* Reply form styling */
+.reply-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.reply-input {
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.submit-reply-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: backgr
+}
+
+  /* MCQ Section Styling */
+.mcq-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mcq-section h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.mcq-item {
+  margin-bottom: 20px;
+}
+
+.mcq-item h4 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.mcq-options {
+  margin: 10px 0;
+}
+
+.mcq-option {
+  display: block;
+  margin: 8px 0;
+  font-size: 1.1rem;
+}
+
+.mcq-option input {
+  margin-right: 10px;
+}
+
+.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+/* Option Button Styling */
+.mcq-option input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #0073e6; /* Custom color for radio button */
+  cursor: pointer;
+}
+
+.mcq-option input[type="radio"]:checked {
+  background-color: #0073e6;
+  color: white;
+  border-color: #0073e6;
+}
+
+.mcq-option label {
+  cursor: pointer;
+}
+
+.mcq-option label:hover {
+  text-decoration: underline;
+}
+
+.mcq-item-feedback {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.mcq-item-feedback.correct {
+  color: green;
+  font-weight: bold;
+}
+
+.mcq-item-feedback.incorrect {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+
+
+.loader-overlay {
+  margin-left: 40px;
+   
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+ }
+
+ /* Navigation Buttons Styles */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.navigation button {
+  background-color: #FF0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+}
+
+.navigation button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.navigation .prev-button {
+  margin-right: 20px;
+}
+
+.navigation button:hover {
+  background-color: #cc0000;
+}
+
+.navigation button svg {
+  margin-right: 8px;
+}

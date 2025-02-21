@@ -1,0 +1,30 @@
+
+body {
+ 
+}
+.form-container {
+   
+    padding: 40px;
+    border-radius: 10px;
+  }
+ 
+  .ql-editor{
+    height: 50vh !important;
+    overflow-y: scroll !important;
+  }
+  /* messageStyles.css */
+.ant-message-notice {
+  z-index: 20000 !important;
+}
+
+.ant-message {
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -24px !important; /* Adjust to fine-tune */
+  margin-left: -80px !important; /* Adjust to fine-tune */
+}

@@ -1,0 +1,17 @@
+.responsive-modal .ant-modal-content {
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .responsive-form .ant-form-item {
+    margin-bottom: 20px;
+  }
+  
+  .responsive-quill {
+    min-height: 200px;
+  }
+  
+  .responsive-upload .ant-upload {
+    width: 100%;
+  }
+  

@@ -1,0 +1,176 @@
+/* General Topbar Styles */
+.topbar {
+  background-color: #fffb1e; /* Yellow theme */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+.topbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topbar-logo img {
+  height: 40px; /* Ensure the logo is responsive */
+}
+
+.topbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.topbar-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.topbar-link:hover {
+  color: #ff0000;
+}
+
+.topbar-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.search-icon {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+}
+
+.search-icon:hover {
+  color: #ff0000;
+}
+
+/* Modal Styles */
+.search-modal .ant-modal-content {
+  background: #fff;
+  padding: 20px;
+}
+
+.search-modal .ant-modal-header {
+  border-bottom: none;
+  text-align: center;
+}
+
+.search-modal .ant-modal-title {
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.search-modal .ant-input {
+  width: 100%;
+}
+
+/* Search Results */
+.search-results {
+  margin-top: 10px;
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-results li {
+  padding: 5px;
+  cursor: pointer;
+}
+
+.search-results li:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .topbar-content {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  /* Hide Links on Small Screens */
+  /* Hide all topbar links initially */
+.topbar-links {
+  display: none;
+}
+
+/* Show only icons for Home and About Us on small screens */
+@media (max-width: 600px) {
+  .topbar-links {
+    display: flex;
+    flex-direction: row; /* Display links in a row */
+    justify-content: center; /* Center the links */
+    width: 100%;
+  }
+
+  .topbar-link {
+    font-size: 0; /* Hide text by setting font size to 0 */
+    flex: none; /* Do not force links to take up equal space */
+    text-align: center; /* Center the text */
+    margin: 0 5px; /* Decrease the distance between the links */
+  }
+
+  /* Show only icons */
+  .topbar-link svg {
+    display: inline-block; /* Show icons */
+    font-size: 24px; /* Adjust icon size if needed */
+    margin-right: 0; /* Remove margin as text is hidden */
+  }
+
+  /* Show only Home and About Us links */
+  .topbar-link:nth-child(1), /* Home */
+  .topbar-link:nth-child(2)  /* About Us */ {
+    display: flex;
+  }
+
+  /* Hide other links */
+  .topbar-link:nth-child(n+3) {
+    display: none;
+  }
+}
+
+
+  /* Logo and Search Icon in the same line */
+  .topbar-logo {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .topbar-logo img {
+    height: 30px; /* Make the logo smaller on small screens */
+  }
+
+  .topbar-right {
+    display: flex;
+    justify-content: flex-end;
+    width: auto;
+  }
+
+  .search-icon {
+    font-size: 24px; /* Larger search icon on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+}

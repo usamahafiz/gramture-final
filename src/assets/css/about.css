@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: #2e8bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    color: #1a5fcc; /* Slightly darker blue on hover */
+  }
+  
+  .about-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .about-section .about-left, .about-section .right-section {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px;
+    box-sizing: border-box;
+  }
+  
+  .about-section .about-left .profile-img img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .about-section .about-left .profile-info h4 {
+    font-size: 25px;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+  
+  .about-section .about-left .profile-info p {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .about-section .about-left .profile-info a {
+    text-decoration: none;
+    color: #2e8bff;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .about-section .right-section h5 {
+    font-size: 40px;
+    color: #000;
+    text-align: center;
+  }
+  
+  .about-section .heading {
+    font-size: 20px;
+    color: #e74c3c;
+    text-align: center;
+  }
+  
+  .about-section .right-section p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-size: 1rem;
+    text-align: justify;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 1200px) {
+    .about-section .right-section h5 {
+      font-size: 35px;
+    }
+  
+    .about-section .about-left .profile-info h4 {
+      font-size: 22px;
+    }
+  
+    .about-section .about-left .profile-info p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    .about-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .about-section .about-left, .about-section .right-section {
+      margin: 10px 0;
+    }
+  
+    .about-section .right-section h5 {
+      font-size: 30px;
+    }
+  
+    .about-section .about-left .profile-info h4 {
+      font-size: 20px;
+    }
+  
+    .about-section .about-left .profile-info p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about-section .right-section h5 {
+      font-size: 28px;
+    }
+  
+    .about-section .about-left .profile-info h4 {
+      font-size: 18px;
+    }
+  
+    .about-section .about-left .profile-info p {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .about-section .right-section h5 {
+      font-size: 24px;
+    }
+  
+    .about-section .about-left .profile-info h4 {
+      font-size: 16px;
+    }
+  
+    .about-section .about-left .profile-info p {
+      font-size: 12px;
+    }
+  }
+  

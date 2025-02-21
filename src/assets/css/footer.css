@@ -1,0 +1,115 @@
+/* Footer Styles */
+.footer {
+  background-color: #000000;
+  color: #00000073;
+  font-size: 0.9rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-logo {
+  width: 120px;
+}
+
+.footer-nav li {
+  list-style: none;
+}
+
+.footer-nav a:hover {
+  color: #ffc107; /* Highlight color */
+  text-decoration: underline;
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  
+  transition: color 0.3s ease;
+}
+
+/* Hover colors for each platform */
+.social-icon.facebook {
+  color: #1877F2; /* Facebook blue */
+}
+
+.social-icon.twitter {
+  color: #1DA1F2; /* Twitter blue */
+}
+
+.social-icon.instagram {
+  color: #E4405F; /* Instagram pink */
+}
+
+.social-icon.linkedin {
+  color: #0077B5; /* LinkedIn blue */
+}
+
+.social-icon.youtube{
+  color: #FF0000; /* YouTube red */
+}
+
+.social-icon.github {
+  color: #333333; /* GitHub dark gray */
+}
+
+.social-icon.pinterest{
+  color: #E60023; /* Pinterest red */
+}
+
+/* Ensure footer sticks at the bottom */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+  .footer-logo {
+    width: 100px;
+  }
+
+  .footer-nav {
+    text-align: center;
+  }
+
+  .footer-nav li {
+    display: inline-block;
+    margin: 5px 10px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* Styling for Center Aligning All Content in Footer */
+.text-md-center {
+  text-align: center !important;
+}
+
+.text-md-start {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}

@@ -1,0 +1,192 @@
+/* Basic Layout */
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Main content wrapper */
+.main-content-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  background-color: #fcf9f9;
+ 
+  position: fixed; /* Fix the sidebar to the top of the page */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: fadeInLeft 1.5s ease-in-out;
+ 
+  cursor: pointer; /* Change cursor to hand on hover */
+  margin-top: 50px;
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  animation: slideInDown 1s ease;
+}
+
+/* Tags list */
+.tags-list {
+  display: flex;
+  flex-direction: column;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  animation: fadeIn 2s ease;
+  cursor: pointer; /* Change cursor to hand on hover */
+}
+
+/* Tag item styling */
+.tag-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+  animation: fadeInUp 1s ease;
+  cursor: pointer; /* Change cursor to hand on hover */
+}
+
+/* Change background and text color when hovering over tag items */
+.tag-item:hover {
+  background-color: #000000; /* Change background on hover */
+  color: #ffffff; /* Change text color to white */
+}
+
+/* Sidebar links styling (if using <a> tags for links) */
+.sidebar a {
+  display: block;
+  padding: 10px;
+  text-decoration: none; /* Remove default underline */
+  color: #333; /* Default text color */
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer; /* Change cursor to hand on hover */
+}
+
+/* Change background color and text color when hovering over sidebar links */
+.sidebar a:hover {
+  background-color: #000000; /* Change background on hover */
+  color: #ffffff; /* Change text color to white */
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  margin-left: 270px; /* Space for fixed sidebar */
+  display: flex;
+  flex-direction: column;
+  animation: fadeInRight 1.5s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments for screens <= 768px */
+@media (max-width: 768px) {
+  /* Sidebar for smaller screens */
+  .sidebar {
+    width: 80%;
+    height: 100vh; 
+    top: 0px;
+    left: 0;
+    z-index: 1000;
+    margin: 0;
+    border-radius: 0;
+    border-color: #b6b6b6;
+  } 
+
+  /* Main content area without sidebar space */
+  .main-content {
+    margin-left: 0;
+    padding: 0px;
+    overflow: hidden  /* Prevents horizontal scrolling */;
+  }
+
+  /* Adjust the position of the collapse button on small screens */
+  .d-lg-none {
+    position: absolute;
+    top: 10px;
+    left: 2px;
+    font-size: 1.5rem;
+    z-index: 400; /* Ensures it stays above other content */
+    margin-top: 390px;
+  }
+
+  /* Sidebar icon styling for small screens */
+  .icon {
+    font-size: 3.0rem;
+    color: rgb(255, 0, 0); /* Red color for the icon */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px; /* Optional: space inside the border */
+  }
+}
+
