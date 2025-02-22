@@ -9,7 +9,7 @@ import { getStorage } from "firebase/storage";
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCAIJkkLMF2no6waTa2ZAPmnLMOzzhFEc4",
+  apiKey: "",
   authDomain: "my-portfolio-64.firebaseapp.com",
   projectId: "my-portfolio-64",
   storageBucket: "my-portfolio-64.appspot.com",
