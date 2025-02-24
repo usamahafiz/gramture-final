@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { message, Spin } from "antd";
+import { Button, message, Spin } from "antd";
 import { getDocs, collection } from "firebase/firestore";
 import { fireStore } from "../firebase/firebase";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import {
+  FaReply,
+  FaShareAlt,
+  FaChevronLeft,
+  FaChevronRight,
+} from "react-icons/fa";
 import "../assets/css/description.css";
 import CommentSection from "./CommentSection";
 import ShareArticle from "./ShareArticle";
@@ -133,6 +140,16 @@ export default function Description() {
     setCompletedMcqs([]);
     setShowResults(false);
   };
+  const getNextTopic = () => {
+    if (currentTopicIndex === null || currentTopicIndex + 1 >= allTopics.length) return null;
+    return allTopics[currentTopicIndex + 1];
+  };
+
+  const getPrevTopic = () => {
+    if (currentTopicIndex === null || currentTopicIndex - 1 < 0) return null;
+    return allTopics[currentTopicIndex - 1];
+  };
+
 
   return (
     <div className="description-container">
@@ -156,6 +173,11 @@ export default function Description() {
               </div>
             </article>
           ))}
+
+          <p style={{ fontSize: "1.1rem", marginLeft: "10px" }}>  
+          Gramture is an Educational website that helps students in their 9th, 10th, 1st year, and 2nd year with their studies. It provides notes, essays, applications, letters, short stories, chapter summaries, and word meanings in easy wording. This website to prepare for exams and improve their English grammar. Gramture makes learning simple and helps students understand subjects better.
+
+          </p>
 
           {/* MCQ Section (Only Show if MCQs Exist) */}
           {mcqs.length > 0 && (
@@ -239,22 +261,47 @@ export default function Description() {
           )}
           <ShareArticle />
           {/* Navigation for Next and Previous Topics */}
-          <div className="navigation">
-            <button
-              className="prev-button"
-              onClick={() => navigateToTopic(-1)}
-              disabled={currentTopicIndex === 0}
-            >
-              <FaArrowLeft /> Previous Topic
-            </button>
-            <button
+          <div className="topic-navigation">
+            {getPrevTopic() && getPrevTopic().subCategory === subCategory && getPrevTopic().class === products[0].class && (
+             <Link 
+             to={`/description/${subCategory}/${getPrevTopic().id}`} 
+             className="prev-button"
+             style={{
+               display: 'flex',
+               alignItems: 'center',
+               marginBottom: '20px',
+               fontSize: '18px',
+               fontWeight: 'bold',
+               textDecoration: 'none',
+               color: '#0073e6',
+             }}
+           >
+             <FaChevronLeft className="nav-icon" /> Previous Topic: {getPrevTopic().topic}
+           </Link>
+           
+            )}
+
+            {getNextTopic() && getNextTopic().subCategory === subCategory && getNextTopic().class === products[0].class && (
+              <Link 
+              to={`/description/${subCategory}/${getNextTopic().id}`} 
               className="next-button"
-              onClick={() => navigateToTopic(1)}
-              disabled={currentTopicIndex === allTopics.length - 1}
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                marginBottom: '20px',
+                fontSize: '18px',
+                fontWeight: 'bold',
+                textDecoration: 'none',
+                color: '#0073e6',
+              }}
             >
-              Next Topic <FaArrowRight />
-            </button>
+              Next Topic: {getNextTopic().topic} <FaChevronRight className="nav-icon" />
+            </Link>
+            
+            )}
           </div>
+
+          
 
           {/* Comment Section */}
           <CommentSection subCategory={subCategory} topicId={topicId} />
